@@ -1,12 +1,12 @@
 from flask import Flask, request, render_template, url_for, redirect
-from flask_cors import CORS
+
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 #tạo đối tượng lớp Flask
 app=Flask(__name__)
 #tạo cors
-CORS(app)
-app.config['CORS_HEADERS']='Content-Type'
+
+
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
 db=SQLAlchemy()
 db.init_app(app)
